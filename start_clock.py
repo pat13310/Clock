@@ -1,4 +1,4 @@
-from PyQt5 import QtCore, QtWidgets
+from PyQt5 import QtCore, QtWidgets, QtGui
 from datetime import datetime
 from PyQt5.QtGui import QColor
 from PyQt5.QtWidgets import QGraphicsDropShadowEffect, QMainWindow
@@ -23,18 +23,33 @@ class ClockScreen(QMainWindow):
         self.shadow.setYOffset(2)
         self.shadow.setColor(QColor(0, 0, 0, 220))
         self.ui.frame.setGraphicsEffect(self.shadow)
-
         # QTIMER => START
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.update_clock)
         self.timer.start(1000)
         self.old_day = -1
-
         self.ui.pushButton_close.clicked.connect(self.close_window)
+        self.offset = None
 
 
     def close_window(self):
         self.close()
+
+    def mousePressEvent(self, event: QtGui.QMouseEvent) -> None:
+        if event.button() == QtCore.Qt.LeftButton:
+            self.offset = event.pos()
+        else:
+            super().mousePressEvent(event)
+
+    def mouseMoveEvent(self, event: QtGui.QMouseEvent) -> None:
+        if self.offset is not None and event.buttons() == QtCore.Qt.LeftButton:
+            self.move(self.pos() + event.pos() - self.offset)
+        else:
+            super().mouseMoveEvent(event)
+
+    def mouseReleaseEvent(self, event: QtGui.QMouseEvent) -> None:
+        self.offset = None
+        super().mouseReleaseEvent(event)
 
     def update_clock(self):
         n = datetime.now()
