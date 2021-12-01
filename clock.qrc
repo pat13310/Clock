@@ -1,5 +1,5 @@
 <RCC>
   <qresource prefix="icones">
-    <file>icones/standard/white/supprimer(1).png</file>
+    <file>icones/close.png</file>
   </qresource>
 </RCC>

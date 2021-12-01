@@ -2,10 +2,10 @@ from PyQt5 import QtCore, QtWidgets
 from datetime import datetime
 from PyQt5.QtGui import QColor
 from PyQt5.QtWidgets import QGraphicsDropShadowEffect, QMainWindow
-from clock.Clock import Ui_Clock
+from Clock import Ui_Clock
 
 import sys
-from clock.saint.saint import get_Saint
+from saint.saint import get_Saint
 
 
 class ClockScreen(QMainWindow):

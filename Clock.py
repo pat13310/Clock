@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Clock(object):
     def setupUi(self, Clock):
         Clock.setObjectName("Clock")
-        Clock.resize(694, 333)
+        Clock.resize(579, 276)
         self.centralwidget = QtWidgets.QWidget(Clock)
         self.centralwidget.setStyleSheet("")
         self.centralwidget.setObjectName("centralwidget")
@@ -37,13 +37,13 @@ class Ui_Clock(object):
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
         self.frame_2 = QtWidgets.QFrame(self.frame)
-        self.frame_2.setGeometry(QtCore.QRect(10, 40, 651, 221))
+        self.frame_2.setGeometry(QtCore.QRect(10, 20, 541, 196))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.frame_2.sizePolicy().hasHeightForWidth())
         self.frame_2.setSizePolicy(sizePolicy)
-        self.frame_2.setMinimumSize(QtCore.QSize(0, 215))
+        self.frame_2.setMinimumSize(QtCore.QSize(0, 187))
         self.frame_2.setMaximumSize(QtCore.QSize(16777215, 16777215))
         self.frame_2.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(170, 0, 255, 255), stop:0.00497512 rgba(197, 197, 147, 255), stop:1 rgba(163, 200, 165, 255));\n"
 "\n"
@@ -54,10 +54,10 @@ class Ui_Clock(object):
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")
         self.label_clock = QtWidgets.QLabel(self.frame_2)
-        self.label_clock.setGeometry(QtCore.QRect(4, 3, 641, 131))
+        self.label_clock.setGeometry(QtCore.QRect(-45, 10, 641, 131))
         font = QtGui.QFont()
         font.setFamily("Leelawadee")
-        font.setPointSize(77)
+        font.setPointSize(68)
         self.label_clock.setFont(font)
         self.label_clock.setStyleSheet("background-color: transparent;\n"
 "border-width:0px;\n"
@@ -65,10 +65,10 @@ class Ui_Clock(object):
         self.label_clock.setAlignment(QtCore.Qt.AlignCenter)
         self.label_clock.setObjectName("label_clock")
         self.label_date = QtWidgets.QLabel(self.frame_2)
-        self.label_date.setGeometry(QtCore.QRect(10, 135, 631, 41))
+        self.label_date.setGeometry(QtCore.QRect(-39, 120, 631, 41))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
-        font.setPointSize(18)
+        font.setPointSize(15)
         self.label_date.setFont(font)
         self.label_date.setStyleSheet("background-color: transparent;\n"
 "border-width:0px;\n"
@@ -76,10 +76,10 @@ class Ui_Clock(object):
         self.label_date.setAlignment(QtCore.Qt.AlignCenter)
         self.label_date.setObjectName("label_date")
         self.label_saint = QtWidgets.QLabel(self.frame_2)
-        self.label_saint.setGeometry(QtCore.QRect(10, 180, 631, 30))
+        self.label_saint.setGeometry(QtCore.QRect(-39, 160, 631, 30))
         font = QtGui.QFont()
         font.setFamily("Segoe UI")
-        font.setPointSize(13)
+        font.setPointSize(11)
         self.label_saint.setFont(font)
         self.label_saint.setStyleSheet("background-color: transparent;\n"
 "border-width:0px;\n"
@@ -87,10 +87,10 @@ class Ui_Clock(object):
         self.label_saint.setAlignment(QtCore.Qt.AlignCenter)
         self.label_saint.setObjectName("label_saint")
         self.label_shadow = QtWidgets.QLabel(self.frame_2)
-        self.label_shadow.setGeometry(QtCore.QRect(5, 5, 641, 144))
+        self.label_shadow.setGeometry(QtCore.QRect(-44, 5, 641, 144))
         font = QtGui.QFont()
         font.setFamily("Leelawadee")
-        font.setPointSize(77)
+        font.setPointSize(68)
         self.label_shadow.setFont(font)
         self.label_shadow.setStyleSheet("background-color: transparent;\n"
 "border-width:0px;\n"
@@ -102,17 +102,21 @@ class Ui_Clock(object):
         self.label_date.raise_()
         self.label_saint.raise_()
         self.label = QtWidgets.QLabel(self.frame)
-        self.label.setGeometry(QtCore.QRect(570, 270, 87, 16))
+        self.label.setGeometry(QtCore.QRect(460, 220, 87, 16))
         self.label.setMaximumSize(QtCore.QSize(16777215, 40))
+        font = QtGui.QFont()
+        font.setPointSize(8)
+        self.label.setFont(font)
         self.label.setStyleSheet("background-color: transparent;")
         self.label.setObjectName("label")
         self.pushButton_close = QtWidgets.QPushButton(self.frame)
-        self.pushButton_close.setGeometry(QtCore.QRect(5, 7, 36, 28))
+        self.pushButton_close.setGeometry(QtCore.QRect(5, 0, 31, 26))
         self.pushButton_close.setStyleSheet("background-color: transparent;")
         self.pushButton_close.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(":/icones/icones/standard/white/supprimer(1).png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("icones/close.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_close.setIcon(icon)
+        self.pushButton_close.setIconSize(QtCore.QSize(15, 15))
         self.pushButton_close.setObjectName("pushButton_close")
         self.verticalLayout.addWidget(self.frame)
         Clock.setCentralWidget(self.centralwidget)
@@ -123,10 +127,10 @@ class Ui_Clock(object):
     def retranslateUi(self, Clock):
         _translate = QtCore.QCoreApplication.translate
         Clock.setWindowTitle(_translate("Clock", "Clock"))
-        self.label_clock.setText(_translate("Clock", "<html><head/><body><p align=\"center\"><span style=\" font-size:72pt;\">12:34:</span><span style=\" font-size:48pt;  color:#5d5d5d;\">59</span></p></body></html>"))
+        self.label_clock.setText(_translate("Clock", "<html><head/><body><p align=\"center\"><span style=\" font-size:66pt;\">12:34:</span><span style=\" font-size:38pt;  color:#5d5d5d;\">59</span></p></body></html>"))
         self.label_date.setText(_translate("Clock", "<html><head/><body><p align=\"center\"><span style=\" color:#3a3a3a;\">Lundi 24 décembre 2022</span></p></body></html>"))
         self.label_saint.setText(_translate("Clock", "<html><head/><body><p align=\"center\"><span style=\" font-style:italic; color:#5a5a5a;\">St Patrick</span></p></body></html>"))
-        self.label_shadow.setText(_translate("Clock", "<html><head/><body><p align=\"center\"><span style=\" font-size:72pt; color:#d9d9d9;\">12:34:</span><span style=\" font-size:48pt; color:#d9d9d9;\">59</span></p></body></html>"))
+        self.label_shadow.setText(_translate("Clock", "<html><head/><body><p align=\"center\"><span style=\" font-size:66pt; color:#969696;\">12:34:</span><span style=\" font-size:38pt; color:#969696;\">59</span></p></body></html>"))
         self.label.setText(_translate("Clock", "<html><head/><body><p><span style=\" font-weight:600; color:#aaaaff;\">by </span><span style=\" color:#8484c6;\">Xenatronics</span></p></body></html>"))
 import clock_rc
 
